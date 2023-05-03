@@ -13,7 +13,7 @@
   "routes": [
     {
       "route": "/*",
-      "allowedRoles": ["authenticated","9e6c1d25-af4c-4aa2-9f60-8e1227cee85f"]
+      "allowedRoles": ["authenticated","user"]
     }
   ],
   "responseOverrides": {
