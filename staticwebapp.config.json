@@ -13,7 +13,7 @@
   "routes": [
     {
       "route": "/*",
-      "allowedRoles": ["authenticated", "settings-reader"]
+      "allowedRoles": ["eleventy-reader"]
     }
   ],
   "responseOverrides": {
