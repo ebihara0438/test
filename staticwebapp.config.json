@@ -1,22 +1,11 @@
 {
   "auth": {
     "identityProviders": {
-      "customOpenIdConnectProviders": {
-        "myProvider": {
-          "registration": {
-            "clientIdSettingName": "AZURE_CLIENT_ID",
-            "clientCredential": {
-              "clientSecretSettingName": "AZURE_CLIENT_SECRET"
-            },
-            "openIdConnectConfiguration": {
-              "wellKnownOpenIdConfiguration": "https://login.microsoftonline.com/563eb106-1a4a-48b9-8657-e45f63cb149c/v2.0/.well-known/openid-configuration"
-            }
-          },
-          "login": {
-            "nameClaimType": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
-            "scopes": ["openid", "profile"],
-            "loginParameterNames": []
-          }
+      "azureActiveDirectory": {
+        "registration": {
+          "openIdIssuer": "https://login.microsoftonline.com/563eb106-1a4a-48b9-8657-e45f63cb149c/v2.0",
+          "clientIdSettingName": "AZURE_CLIENT_ID",
+          "clientSecretSettingName": "AZURE_CLIENT_SECRET"
         }
       }
     }
@@ -24,7 +13,7 @@
   "routes": [
     {
       "route": "/*",
-      "allowedRoles": ["authenticated"]
+      "allowedRoles": ["eleventy"]
     }
   ],
   "responseOverrides": {
@@ -34,4 +23,3 @@
     }
   }
 }
-
