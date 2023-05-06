@@ -2,7 +2,7 @@
   "auth": {
     "identityProviders": {
       "customOpenIdConnectProviders": {
-        "b2c": {
+        "myProvider": {
           "registration": {
             "clientIdSettingName": "AZURE_CLIENT_ID",
             "clientCredential": {
@@ -14,7 +14,8 @@
           },
           "login": {
             "nameClaimType": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
-            "scopes": ["openid", "profile"]
+            "scopes": ["openid", "profile"],
+            "loginParameterNames": []
           }
         }
       }
